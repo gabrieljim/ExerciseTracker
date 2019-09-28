@@ -1,5 +1,4 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
 
 function NewUser(props) {
   const handleForm = async e => {
@@ -14,13 +13,12 @@ function NewUser(props) {
     });
     props.history.push(`/`);
     props.history.push(`/users`);
-    props.history.push(`/users/${username}`);
   };
   return (
     <div className="container">
       <h1 className="title">Add a new user</h1>
 
-      <form id="newuserform" autoComplete="off" onSubmit={e => handleForm(e)}>
+      <form autoComplete="off" onSubmit={e => handleForm(e)}>
         <input
           type="text"
           name="username"

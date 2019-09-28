@@ -72,6 +72,10 @@ input {
   transition: background-color 0.2s;
 }
 
+.mainbtn[type="submit"] {
+  margin: auto;
+}
+
 .mainbtn:hover {
   background-color: #f7f1e3 !important;
   color: #706fd3 !important;
@@ -94,13 +98,14 @@ input {
   color: #f7f1e3;
 }
 
-#newuserform {
+form {
   width: 50%;
   margin: auto;
   margin-top: 30px;
+  transition: all 0.2s;
 }
 
-#newuserform * {
+form * {
   margin: 20px auto;
   border: 1px solid #f7f1e3;
   background-color: #706fd3;
@@ -112,7 +117,8 @@ input {
   outline: none;
 }
 
-#newuserform input[type="text"] {
+form input[type="text"],
+form input[type="number"] {
   border-top: none;
   border-left: none;
   border-right: none;
@@ -131,7 +137,8 @@ i {
   transition: all 0.2s;
 }
 
-.usersList {
+.usersList,
+.exerciseList {
   width: 70%;
   max-height: 80vh;
   margin: auto;
@@ -142,7 +149,9 @@ i {
   box-shadow: inset 0 0 10px black;
 }
 
-.usersList a {
+.usersList a,
+.exerciseList a,
+.exercise {
   padding: 20px;
   display: block;
   text-decoration: none;
@@ -150,14 +159,26 @@ i {
   transition: all 0.2s;
 }
 
-.usersList a:hover {
+.usersList a:hover,
+.exerciseList a:hover,
+.exercise:hover {
   background-color: #d1ccc0;
   color: #2c2c54;
 }
 
+.fa-trash {
+  font-size: 27px;
+  margin-left: 10px;
+}
+
+.fa-trash:hover {
+  cursor: pointer;
+  color: #ff5252;
+}
+
 @media screen and (max-width: 700px) {
   .buttons,
-  #newuserform {
+  form {
     width: 100%;
   }
 

@@ -28,7 +28,7 @@ function Users() {
           users.map(user => {
             return (
               <li key={user._id} className="user">
-                <Link to={path + user.username}>{user.username}</Link>
+                <Link to={path + user._id}>{user.username}</Link>
               </li>
             );
           })
